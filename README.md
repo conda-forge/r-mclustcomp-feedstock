@@ -1,11 +1,22 @@
+About r-mclustcomp-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mclustcomp-feedstock/blob/main/LICENSE.txt)
+
 About r-mclustcomp
-==================
+------------------
 
 Home: https://CRAN.R-project.org/package=mclustcomp
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mclustcomp-feedstock/blob/main/LICENSE.txt)
+Summary: Given a set of data points, a clustering is defined as a disjoint partition where each pair of sets in a partition has no overlapping elements. This package provides 25 methods that play a role somewhat similar to distance or metric that measures similarity of two clusterings - or partitions. For a more detailed description, see Meila, M. (2005) <doi:10.1145/1102351.1102424>.
+About r-mclustcomp
+------------------
+
+Home: https://CRAN.R-project.org/package=mclustcomp
+
+Package license: GPL-3.0-or-later
 
 Summary: Given a set of data points, a clustering is defined as a disjoint partition where each pair of sets in a partition has no overlapping elements. This package provides 25 methods that play a role somewhat similar to distance or metric that measures similarity of two clusterings - or partitions. For a more detailed description, see Meila, M. (2005) <doi:10.1145/1102351.1102424>.
 
@@ -27,13 +38,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_r_base4.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17885&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mclustcomp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_r_base4.2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17885&branchName=main">
@@ -41,10 +45,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_r_base4.1</td>
+              <td>linux_64_r_base4.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17885&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mclustcomp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mclustcomp-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -52,6 +56,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17885&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mclustcomp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_r_base4.3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17885&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mclustcomp-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.3" alt="variant">
                 </a>
               </td>
             </tr><tr>
