@@ -12,28 +12,33 @@ source:
   sha256: 032eac106e11496de702ce5085fa2c1077811edf3f9c23c6a6c99e7a8eaeb9cf
 
 build:
-  number: 3
+  number: 4
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib("c") }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("m2w64_c") }}          # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-rcpp                       # [build_platform != target_platform]
+    - r-rcpparmadillo              # [build_platform != target_platform]
+    - r-rdpack                     # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ stdlib("c") }}            # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib("m2w64_c") }}      # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ compiler('fortran') }}    # [osx and arm64]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-    - r-rcpp                       # [build_platform != target_platform]
-    - r-rcpparmadillo              # [build_platform != target_platform]
-    - r-rdpack                     # [build_platform != target_platform]
   host:
     - r-base
     - r-rcpp
@@ -64,22 +69,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: mclustcomp
-# Type: Package
-# Title: Measures for Comparing Clusters
-# Version: 0.3.3
-# Authors@R: person("Kisung", "You", email = "kisungyou@outlook.com", role = c("aut", "cre"))
-# Description: Given a set of data points, a clustering is defined as a disjoint partition where each pair of sets in a partition has no overlapping elements. This package provides 25 methods that play a role somewhat similar to distance or metric that measures similarity of two clusterings - or partitions. For a more detailed description, see Meila, M. (2005) <doi:10.1145/1102351.1102424>.
-# License: GPL (>= 3)
-# Encoding: UTF-8
-# Imports: Rcpp, Rdpack
-# LinkingTo: Rcpp, RcppArmadillo
-# RoxygenNote: 7.1.1
-# RdMacros: Rdpack
-# NeedsCompilation: yes
-# Packaged: 2021-06-12 06:23:48 UTC; kisung
-# Author: Kisung You [aut, cre]
-# Maintainer: Kisung You <kisungyou@outlook.com>
-# Repository: CRAN
-# Date/Publication: 2021-06-13 04:40:11 UTC
