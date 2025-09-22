@@ -1,4 +1,4 @@
-{% set version = '0.3.3' %}
+{% set version = "0.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mclustcomp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mclustcomp/mclustcomp_{{ version }}.tar.gz
-  sha256: 032eac106e11496de702ce5085fa2c1077811edf3f9c23c6a6c99e7a8eaeb9cf
+  sha256: c2bb76a874a11dea3c8e8aa6a3a176c41a383477d97370f3e31b024bf2cb4a9e
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -58,11 +58,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=mclustcomp
   license: GPL-3.0-or-later
-  summary: Given a set of data points, a clustering is defined as a disjoint partition where
-    each pair of sets in a partition has no overlapping elements. This package provides
-    25 methods that play a role somewhat similar to distance or metric that measures
-    similarity of two clusterings - or partitions. For a more detailed description,
-    see Meila, M. (2005) <doi:10.1145/1102351.1102424>.
+  summary: Given a set of data points, a clustering is defined as a disjoint partition where each pair of sets in a partition has no overlapping elements. This package provides 25 methods that play a role somewhat similar to distance or metric that measures similarity of two clusterings - or partitions. For a more detailed
+    description, see Meila, M. (2005) <doi:10.1145/1102351.1102424>.
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
